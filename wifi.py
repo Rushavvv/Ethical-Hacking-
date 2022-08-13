@@ -31,5 +31,6 @@ import subprocess
 
 import re 
 
-wifi_name = input("Enter wifi name: ")
+test_1 = subprocess.run(["networksetup", "-listpreferredwirelessnetworks", "en0" ])
+wifi_name = input("Enter wifi ko nam: ")
 command = subprocess.run (["security" , "find-generic-password" , "-wa", f"{wifi_name}"])
